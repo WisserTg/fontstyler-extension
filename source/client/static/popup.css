@@ -135,15 +135,32 @@ table {
     text-align: center;
     color: #646464;
 }
-.change-info-description {
+/* .change-info-description {
     color: #999999;
     text-align: center;
 
     padding: 0 7px;
-    margin: 2px 0;
+    margin: 4px 0;
 
-    font-size: 0.6em;
+    font-size: 1em;
     line-height: 1.2em;
+} */
+.change-info-tip {
+    color: #999999;
+    text-align: center;
+
+    margin: 4px 0;
+    padding: 0 12px;
+
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+.change-info-tip::before {
+    content: "Tip: ";
+    color: #777777;
+}
+.change-info-tip .tip-button {
+    text-decoration: underline;
 }
 
 .tooltip-root {

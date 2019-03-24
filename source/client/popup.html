@@ -18,9 +18,12 @@
             </div>
             <form class="change-form">
                 <div class="change-info-row">
-                    <p class="change-info">Specify the font</p>
-                    <p class="change-info-description">Without quotes!</p>
-                    <p class="change-info-description">You also can just press enter after typing the name of the font.</p>
+                    <p class="change-info">FontStyler</p>
+                    <!-- <p class="change-info-description">Specify the font without quotes and press one of these buttons.</p> -->
+
+                    <p class="change-info-tip">You also can just press enter instead of pressing <span class="tip-button">Apply (Once)</span></p>
+                    <p class="change-info-tip"><span class="tip-button">Apply (Once)</span> will affect the font until page reload.</p>
+                    <p class="change-info-tip"><span class="tip-button">Apply (Auto)</span> will automatic change font on next visit.</p>
                 </div>
                 <div class="change-input-row">
                     <input id="change-input" type="text" class="change-input change-action" placeholder="Font name..." required>
@@ -34,11 +37,11 @@
                     </button>
                 </div>
                 <div class="change-button-row">
-                    <p id="change-me" class="change-additional-button tooltip-root">Me (VK)
-                        <span class="tooltip-text">Url to myself</span>
+                    <p id="change-me" class="change-additional-button tooltip-root">Url to me (VK)
+                        <span class="tooltip-text">vk.com/wisser_tg</span>
                     </p>
-                    <p id="change-clear-data" class="change-additional-button tooltip-root">Clear data
-                        <span class="tooltip-text">Clear all auto font data, so each site where you'd added a font through `Apply (Auto)` will have own font.</span>
+                    <p id="change-clear-data" class="change-additional-button tooltip-root">Clear fonts
+                        <span class="tooltip-text">Clear font data. Each font which you have added will be deleted.</span>
                     </p>
                 </div>
             </form>
