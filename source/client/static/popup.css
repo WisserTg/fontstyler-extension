@@ -1,0 +1,210 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Font rechange */
+* {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+}
+
+.change {
+    display: block;
+    width: 356px;
+}
+.change .change-container {
+    display: block;
+    padding: 8px 24px;
+}
+.change .change-form {
+    display: block;
+}
+.change .change-logo {
+    display: block;
+    margin-bottom: 12px;
+}
+.change-logo-item {
+    display: block;
+    margin: 0 auto;
+
+    width: 64px;
+    height: 64px;
+}
+
+.change-action {
+    border-radius: 2px;
+    border: none;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    box-shadow: 0 0 0 1px #999999;
+
+    outline: none;
+
+    transition: background-color 200ms, box-shadow 200ms;
+
+    margin: 4px 0;
+}
+
+.change-input-row {
+    display: flex;
+    margin-top: 12px;
+}
+
+
+.change-input {
+    width: 100%;
+    padding: 4px 7px;
+}
+.change-input:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px #343434;
+}
+.change-input:focus {
+    background-color: #323232;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #202020;
+}
+.change-input::placeholder {
+    color: #646464;
+}
+.change-input:focus::placeholder {
+    color: #aaaaaa;
+}
+
+.change-button {
+    padding: 4px 7px;
+    color: #646464;
+
+    cursor: pointer;
+}
+.change-button:hover {
+    box-shadow: 0 0 0 2px #343434;
+}
+.change-button:active {
+    background-color: #323232;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #202020;
+}
+
+
+.change-button-row {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+
+.change-info-row {
+    display: block;
+}
+.change-info {
+    margin: 6px 0;
+    padding: 0 4px;
+
+    text-align: center;
+    color: #646464;
+}
+.change-info-description {
+    color: #999999;
+    text-align: center;
+
+    padding: 0 7px;
+    margin: 2px 0;
+
+    font-size: 0.6em;
+    line-height: 1.2em;
+}
+
+.tooltip-root {
+    position: relative;
+}
+.tooltip-root .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    bottom: 125%;
+    left: -10%;
+    width: 125%;
+}
+.tooltip-root .tooltip-text {
+    opacity: 0;
+    transition: opacity 200ms 1s;
+}
+.tooltip-root .tooltip-text {
+    text-align: center;
+    background-color: #323232;
+    color: #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 4px;
+
+    font-size: 0.8em;
+}
+.tooltip-root .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #323232 transparent transparent transparent;
+}
+.tooltip-root:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.change-additional-button {
+    font-size: 0.8em;
+    color: #999999;
+    border-bottom: 1px dashed #999999;
+
+    cursor: pointer;
+
+    transition: color 200ms, border-bottom 200ms;
+}
+.change-additional-button:hover {
+    color: #777777;
+    border-bottom: 1px dashed #777777;
+}
+.change-additional-button:active {
+    color: #333333;
+    border-bottom: 1px solid #333333;
+}
+.change-additional-button {
+    display: inline-flex;
+    margin: 6px 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="static/jquery.min.js"></script>
+    <script src="static/popup.min.js"></script>
+
+    <link rel="stylesheet" href="static/popup.min.css">
+</head>
+<body>
+    <div class="change">
+        <div class="change-container">
+            <div class="change-logo">
+                <img src="static/logo.png" alt="Here must be a icon but..." class="change-logo-item">
+            </div>
+            <form class="change-form">
+                <div class="change-info-row">
+                    <p class="change-info">Specify the font</p>
+                    <p class="change-info-description">Without quotes!</p>
+                    <p class="change-info-description">You also can just press enter after typing the name of the font.</p>
+                </div>
+                <div class="change-input-row">
+                    <input id="change-input" type="text" class="change-input change-action" placeholder="Font name..." required>
+                </div>
+                <div class="change-button-row">
+                    <button id="change-apply-one" class="change-button change-action tooltip-root" type="button">Apply (Once)
+                        <span class="tooltip-text">Applies the font once at the page.</span>
+                    </button>
+                    <button id="change-apply-auto" class="change-button change-action tooltip-root" type="button">Apply (Auto)
+                        <span class="tooltip-text">Applies the font to the page and it will be applied next page load.</span>
+                    </button>
+                </div>
+                <div class="change-button-row">
+                    <p id="change-me" class="change-additional-button tooltip-root">Me (VK)
+                        <span class="tooltip-text">Url to myself</span>
+                    </p>
+                    <p id="change-clear-data" class="change-additional-button tooltip-root">Clear data
+                        <span class="tooltip-text">Clear all auto font data, so each site where you'd added a font through `Apply (Auto)` will have own font.</span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
