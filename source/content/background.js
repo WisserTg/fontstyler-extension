@@ -23,17 +23,13 @@
         );
     }
 
-    function get(hostname) {
-        let output;
-
+    function get(hostname, callback) {
         chrome.storage.local.get(
             [hostname],
             function (map) {
-                output = map[hostname];
+                callback(map[hostname]);
             }
         );
-
-        return output;
     }
 
     function clear() {
@@ -58,12 +54,12 @@
             // new URL() will generate new object with some parameters, we need to get hostname from URL, so there's it.
             let hostname = new URL(tab.url).hostname;
 
-            let font = get(hostname);
-
-            if (font)
-                send(id, font);
-            else
-                return;
+            get(hostname, function (font) {
+                if (font)
+                    send(id, font);
+                else
+                    return;
+            });
         });
     });
 
@@ -77,7 +73,7 @@
             else if (message.type === "apply_auto")
                 query(function (tab) {
                     set(new URL(tab.url).hostname, message.font);
-                    send(tab.id, message.fon);
+                    send(tab.id, message.font);
                 });
             else if (message.type === "clear")
                 clear();
