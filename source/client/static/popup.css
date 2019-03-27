@@ -225,3 +225,33 @@ table {
     display: inline-flex;
     margin: 6px 0;
 }
+
+
+.change-sites-list {
+    display: flex;
+    flex-direction: column;
+}
+.change-sites-list .change-sites-item {
+    display: block;
+
+    margin: 4px 0;
+}
+.change-sites-list .change-sites-item {
+    text-align: center;
+    font-size: 14px;
+}
+
+.change-sites-list .change-sites-item .change-sites-href {
+    color: #999999;
+}
+.change-sites-list .change-sites-item .change-sites-href::after {
+    content: ":";
+}
+
+.change-sites-list .change-sites-item .change-sites-font {
+    color: #777777;
+}
+.change-sites-list .change-sites-item .change-sites-font::before,
+.change-sites-list .change-sites-item .change-sites-font::after {
+    content: "\"";
+}

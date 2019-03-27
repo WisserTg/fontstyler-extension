@@ -9,7 +9,10 @@
         document.head.appendChild(dom);
 
         return function (font) {
-            dom.innerHTML = "* { font-family: \"" + font + "\" !important; }";
+            // dom.innerHTML = "* { font-family: \"" + font + "\" !important; }";
+            // dom.innerHTML = "@font-face { font-family: \"" + font + "\"; src: local(\"" + font + "\"), url(\"" + "\"); } * { font-family: \"" + font + "\"; }";
+            dom.innerHTML = "@import url(\"" + "https://fonts.googleapis.com/css?family=" + font + "\");" +
+                "* { font-family: \"" + font + "\" !important; }";
         };
     })();
 

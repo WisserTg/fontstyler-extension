@@ -32,8 +32,19 @@
         );
     }
 
+    function getAll(callback) {
+        chrome.storage.local.get(
+            null,
+            callback
+        );
+    }
+
     function clear() {
         chrome.storage.local.clear();
+    }
+
+    function clearh(hostname) {
+        chrome.storage.local.remove([hostname]);
     }
 
     function send(id, font) {
@@ -74,9 +85,27 @@
                 query(function (tab) {
                     set(new URL(tab.url).hostname, message.font);
                     send(tab.id, message.font);
+                    getAll(function (items) {
+                        port.postMessage(items);
+                    });
                 });
-            else if (message.type === "clear")
+            else if (message.type === "clear_data") {
                 clear();
+                getAll(function (items) {
+                    port.postMessage(items);
+                });
+            }
+            else if (message.type === "clear_this")
+                query(function (tab) {
+                    clearh(new URL(tab.url).hostname);
+                    getAll(function (items) {
+                        port.postMessage(items);
+                    });
+                });
+            else if (message.type === "update")
+                getAll(function (items) {
+                    port.postMessage(items);
+                })
             else
                 return;
         });
